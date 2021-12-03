@@ -1,0 +1,76 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+} */
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 2em 0;
+}
+
+h1,
+h2 {
+    margin-bottom: 1em;
+}
+
+button {
+    margin-bottom: 1em;
+    padding: .75em 1.5em;
+    font-size: 1.2rem;
+    background: chartreuse;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    height: 400px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.snake_square {
+    width: 20px;
+    height: 20px;
+    background: rgb(119, 245, 239);
+    flex-grow: 1;
+}
+
+.snake {
+    background: green;
+}
+
+.food {
+    background-image: radial-gradient(farthest-side at 50% 50%,blue,white,red,rgb(119, 245, 239));
+}
+
+
+.game-over {
+    border: 2px solid black;
+    background: red;
+    color: black;
+    font-weight: bold;
+    padding: 0.75em;
+    width:15%;
+    margin: 0 auto;
+    position: absolute;
+    left: 40%;
+    top: 55%;
+    opacity: 1;
+    display: none;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    font-style: italic;
+    margin-top: 4em;
+    margin-right: 3em;
+    text-align: right;
+}
+
+.mobile-container {
+    display: none;
+}
