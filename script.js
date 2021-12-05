@@ -8,7 +8,7 @@ const rightArrow =  document.querySelector(".right-arrow")
 const upArrow =  document.querySelector(".up-arrow")
 const downArrow =  document.querySelector(".down-arrow")
 
-console.log(window.innerWidth)
+// console.log(window.innerWidth)
 
 let gridHeight = 20;
 let gridWidth = 40;
