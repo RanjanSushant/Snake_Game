@@ -64,6 +64,10 @@ currentSnake.forEach( currentSquare => gridSquares[currentSquare].classList.add(
 
 function startGame() {
     // console.log("starting")
+    if(window.innerWidth < 726) {
+        startBtn.style.display = "none"
+        startBtn.style.opacity = 1;
+    }
     gameOver.style.display = "none";
     grid.style.opacity = 1;
     clearInterval(timerId)
@@ -84,6 +88,10 @@ function snakeDead() {
     gameOver.style.display = "block";
     grid.style.opacity = 0.4;
     startBtn.textContent = "Restart Game"
+    if(window.innerWidth < 726) {
+        startBtn.style.display = "block";
+        startBtn.style.opacity = 1
+    }
     newDirection = 0;
     return clearInterval(timerId)
 }

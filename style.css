@@ -115,19 +115,35 @@ button {
     }
 
     .grid {
+        position: relative;
         height: 600px;
         width: 360px;
         margin: 0 auto;
         margin-top: 0.2em;
     }
 
-    h2,
-    button {
+    h2{
         margin: 0;
+    }
+
+    button {
+        z-index: 1;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        padding: .75em 1.5em;
+        font-size: 1.2rem;
+        background: chartreuse;
+        font-weight: bold;
+        border-radius: 10px;
     }
 
     .copyright {
         text-align: center;
         margin: 0;
+    }
+
+    .game-over {
+        top: 40%;
     }
 }
