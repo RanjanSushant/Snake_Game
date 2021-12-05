@@ -19,7 +19,7 @@ let snakeWidth = 20;
 function setGridDimensions() {
     if(window.innerWidth < 726){
         gridHeight = 30;
-        gridWidth = 20;
+        gridWidth = 18;
     } else {
         gridWidth = 40;
         gridHeight = 20;
