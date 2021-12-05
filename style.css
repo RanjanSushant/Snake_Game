@@ -105,6 +105,27 @@ button {
 }
 
 @media (max-width: 725px) {
+
+    body {
+        margin: 0.5em;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    button {
+        z-index: 1;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        padding: .75em 1.5em;
+        font-size: 1.2rem;
+        background: chartreuse;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
     .desktop-heading {
         display: none;
     }
@@ -120,22 +141,6 @@ button {
         width: 360px;
         margin: 0 auto;
         margin-top: 0.2em;
-    }
-
-    h2{
-        margin: 0;
-    }
-
-    button {
-        z-index: 1;
-        position: absolute;
-        top: 30%;
-        left: 30%;
-        padding: .75em 1.5em;
-        font-size: 1.2rem;
-        background: chartreuse;
-        font-weight: bold;
-        border-radius: 10px;
     }
 
     .copyright {
