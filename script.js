@@ -3,11 +3,30 @@ const startBtn = document.getElementById("start-btn");
 const gameOver = document.querySelector(".game-over");
 const scoreDisplay = document.getElementById("score");
 
+const leftArrow =  document.querySelector(".left-arrow")
+const rightArrow =  document.querySelector(".right-arrow")
+const upArrow =  document.querySelector(".up-arrow")
+const downArrow =  document.querySelector(".down-arrow")
+
+console.log(window.innerWidth)
+
 let gridHeight = 20;
 let gridWidth = 40;
 
 let snakeHeight = 20;
 let snakeWidth = 20;
+
+function setGridDimensions() {
+    if(window.innerWidth < 726){
+        gridHeight = 30;
+        gridWidth = 20;
+    } else {
+        gridWidth = 40;
+        gridHeight = 20;
+    }  
+}
+
+setGridDimensions()
 
 const numberOfSquares = (gridWidth*gridHeight)
 
@@ -29,6 +48,7 @@ let snakeDirection = {
 }
 
 let currentDirection = 0;
+
 
 
 //creating grid
@@ -77,6 +97,26 @@ function changeDirection(event) {
     }    
 }
 
+leftArrow.addEventListener("click", function() {
+    // console.log("Go left")
+    newDirection = snakeDirection["ArrowLeft"];
+  })
+
+rightArrow.addEventListener("click", function() {
+    // console.log("Go left")
+    newDirection = snakeDirection["ArrowRight"];
+})
+
+upArrow.addEventListener("click", function() {
+    // console.log("Go left")
+    newDirection = snakeDirection["ArrowUp"];
+})
+
+downArrow.addEventListener("click", function() {
+    // console.log("Go left")
+    newDirection = snakeDirection["ArrowDown"];
+})
+
 function moveSnake() { 
     if( (currentSnake[0] % gridWidth === gridWidth-1 && newDirection === 1) || 
         (currentSnake[0] - gridWidth < 0 && newDirection === -gridWidth) || 
@@ -113,6 +153,7 @@ function generateFood() {
     } while(gridSquares[foodIndex].classList.contains("snake"))
     gridSquares[foodIndex].classList.add("food")
 }
+
 
 document.addEventListener("keyup",changeDirection)
 
