@@ -46,6 +46,7 @@ button {
 .game-over {
     border: 2px solid black;
     background: red;
+    text-align: center;
     color: black;
     font-weight: bold;
     padding: 0.75em;
@@ -150,5 +151,7 @@ button {
 
     .game-over {
         top: 40%;
+        left: 38%;
+        width: 20%;
     }
 }
